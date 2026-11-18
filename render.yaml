@@ -1,0 +1,17 @@
+# Blueprint do Render: New → Blueprint → escolha este repositório.
+services:
+  - type: web
+    name: lista-tarefas
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/tarefas
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      # Preencha no painel do Render com os dados do Neon (nunca no código)
+      - key: DB_URL
+        sync: false   # jdbc:postgresql://SEU-HOST.neon.tech/neondb?sslmode=require
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
