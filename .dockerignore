@@ -1,0 +1,6 @@
+target
+frontend/node_modules
+src/main/resources/static
+.git
+.idea
+.env
